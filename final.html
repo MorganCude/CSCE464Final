@@ -1,0 +1,279 @@
+<!-- Link to Github: https://github.com/MorganCude/CSCE464-Midterm -->>
+
+<!--New feature-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Inc. - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .flex-item {
+            flex: 1;
+            margin: 0 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav li {
+            float: left;
+            position: relative;
+        }
+
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #111;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #111;
+        }
+
+        @media screen and (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+
+            .flex-item {
+                margin: 10px 0;
+            }
+        }
+
+        .flex-item img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .property-search-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .property-search-form input[type="text"],
+        .property-search-form select {
+            flex: 1;
+        }
+
+        .property-search-form input[type="submit"] {
+            flex: 0 1 auto;
+        }
+
+        .contact-us {
+            margin-top: 20px;
+        }
+
+        .blog-post {
+            margin-bottom: 20px;
+        }
+
+        .blog-post a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .blog-post a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Real Estate Inc.</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="final.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="virtual-tour.html">Virtual Tour</a></li>
+        </ul>
+    </nav>
+
+    <!--New feature-->
+    <div class="container">
+      <div class="content">
+          <h2>Find Your Dream Home</h2>
+          <form id="property-search-form">
+              <div class="form-group">
+                  <label for="property-type">Property Type:</label>
+                  <select id="property-type" name="property-type">
+                      <option value="residential">Residential</option>
+                      <option value="commercial">Commercial</option>
+                  </select>
+              </div>
+
+              <div class="form-group">
+                  <label for="price-range">Price Range:</label>
+                  <input type="text" id="price-range" name="price-range">
+              </div>
+
+              <div class="form-group">
+                  <label for="location">Location:</label>
+                  <input type="text" id="location" name="location">
+              </div>
+
+              <input type="submit" value="Search">
+          </form>
+        </div>
+
+        <div class="content">
+            <h2>Featured Properties</h2>
+            <div class="flex-container">
+                <div class="flex-item">
+                  <img src="https://as1.ftcdn.net/v2/jpg/03/60/46/44/1000_F_360464434_nBakyPQGXS5J3jGVKrSxodvxUUcfuF1Y.jpg" alt="Studio Apartment">
+                    <h3>Modern Apartment</h3>
+                    <p>Studio, 1 bath, city view.</p>
+                </div>
+                <div class="flex-item">
+                  <img src="https://as2.ftcdn.net/v2/jpg/02/68/99/61/1000_F_268996146_Nx954zE1EgOxpowCru9nbYq32vX9M5oa.jpg" alt="1 Bed Apartment">
+                    <h3>Luxury Villa</h3>
+                    <p>1 bed, 1 bath, beachfront.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--New feature-->
+        <div class="map">
+            <h2>Our Locations</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24186.615447648888!2d-74.002798!3d40.712776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a3162e405ad%3A0x1b40a50a2c040b99!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1604355602502!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+
+        <div class="content">
+            <h2>Latest Insights</h2>
+            <div class="blog-post">
+                <h3>Real Estate Market Trends 2024</h3>
+                <p>Stay up-to-date with the latest market trends...</p>
+                <a href="blog-post-1.html">Read More</a>
+            </div>
+            <div class="blog-post">
+                <h3>Top 5 Tips for First-Time Home Buyers</h3>
+                <p>Buying your first home can be overwhelming...</p>
+                <a href="blog-post-2.html">Read More</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("property-search-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let propertyType = document.getElementById("property-type").value;
+            if (propertyType === "residential") {
+                window.location.href = "residential.html";
+            } else if (propertyType === "commercial") {
+                window.location.href = "commercial.html";
+            }
+        });
+    </script>
+</body>
+</html>
